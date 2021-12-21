@@ -178,10 +178,6 @@
 <span id="178">178</span>
 <span id="179">179</span>
 <span id="180">180</span>
-<span id="181">181</span>
-<span id="182">182</span>
-<span id="183">183</span>
-<span id="184">184</span>
 </pre><pre class="rust"><code><span class="comment">// Copyright (c) taalika Contributors</span>
 <span class="comment">// SPDX-License-Identifier: MIT OR Apache-2.0</span>
 
@@ -226,7 +222,7 @@
 <span class="doccomment">//!</span>
 <span class="doccomment">//! # Other features</span>
 <span class="doccomment">//!</span>
-<span class="doccomment">//!   - The [`Table::with_header`] and [`Table::add_header`] methods add</span>
+<span class="doccomment">//!   - The [`Table::with_heading`] and [`Table::add_heading`] methods add</span>
 <span class="doccomment">//!     lines that span all columns.</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//!   - The [`row!`] macro builds a row with a fixed number of columns</span>
@@ -234,6 +230,10 @@
 <span class="doccomment">//!</span>
 <span class="doccomment">//!   - The [`Table::set_line_end`] method allows changing the line ending</span>
 <span class="doccomment">//!     to include a carriage return (or whatever you want).</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//!   - The [`Row::with_ansi_cell`] and [`Row::add_ansi_cell`] methods can be</span>
+<span class="doccomment">//!     used to add cells with ANSI color codes, and still have their widths be</span>
+<span class="doccomment">//!     computed correctly.</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! # Usage</span>
 <span class="doccomment">//!</span>
@@ -266,14 +266,6 @@
 <span class="doccomment">//!   including, color, borders, and CSV import.</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! [`row!`]: macro.row.html</span>
-<span class="doccomment">//! [`Row`]: struct.Row.html</span>
-<span class="doccomment">//! [`Table`]: struct.Table.html</span>
-<span class="doccomment">//! [`Table::add_header`]: struct.Table.html#method.add_header</span>
-<span class="doccomment">//! [`Table::add_row`]: struct.Table.html#method.add_row</span>
-<span class="doccomment">//! [`Table::new`]: struct.Table.html#method.new</span>
-<span class="doccomment">//! [`Table::set_line_end`]: struct.Table.html#method.set_line_end</span>
-<span class="doccomment">//! [`Table::with_row`]: struct.Table.html#method.with_row</span>
-<span class="doccomment">//! [`Table::with_header`]: struct.Table.html#method.with_header</span>
 
 <span class="attribute">#![<span class="ident">warn</span>(<span class="ident">missing_docs</span>)]</span>
 
