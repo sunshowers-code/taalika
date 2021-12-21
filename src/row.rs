@@ -13,10 +13,10 @@ use std::fmt::{Debug, Display, Formatter};
 /// # Examples
 ///
 /// ```
-/// use tabular::row;
+/// use taalika::row;
 ///
 /// # fn main() {
-/// let table = tabular::Table::new("{:>}  ({:<}) {:<}")
+/// let table = taalika::Table::new("{:>}  ({:<}) {:<}")
 ///     .with_row(row!(1, "I", "one"))
 ///     .with_row(row!(5, "V", "five"))
 ///     .with_row(row!(10, "X", "ten"))
@@ -60,8 +60,8 @@ impl Row {
     /// }
     ///
     /// impl DirEntry {
-    ///     fn to_row(&self) -> tabular::Row {
-    ///         tabular::Row::new()
+    ///     fn to_row(&self) -> taalika::Row {
+    ///         taalika::Row::new()
     ///             .with_cell(self.size)
     ///             .with_cell(if self.is_directory { "d" } else { "" })
     ///             .with_cell(&self.name)
@@ -125,7 +125,7 @@ impl Row {
     /// # Examples
     ///
     /// ```
-    /// # use tabular::*;
+    /// # use taalika::*;
     /// use std::fmt::Display;
     ///
     /// struct Matrix<'a, T: 'a> {
@@ -180,7 +180,7 @@ impl Row {
     /// [`Table::add_row`]'s invariant.
     ///
     /// ```
-    /// # use tabular::*;
+    /// # use taalika::*;
     /// # use std::fmt::Display;
     /// fn print_ragged_matrix<T: Display>(matrix: &[&[T]]) {
     ///    let ncols = matrix.iter().map(|row| row.len()).max().unwrap_or(0);

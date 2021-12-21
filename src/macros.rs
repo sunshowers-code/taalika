@@ -9,10 +9,10 @@
 /// # Examples
 ///
 /// ```
-/// use tabular::row;
+/// use taalika::row;
 ///
 /// # fn main() {
-/// let table = tabular::Table::new("{:>}  {:<}  {:<}")
+/// let table = taalika::Table::new("{:>}  {:<}  {:<}")
 ///     .with_row(row!(34, "hello", true))
 ///     .with_row(row!(567, "goodbye", false));
 ///
@@ -50,7 +50,7 @@ macro_rules! row {
 /// # Examples
 ///
 /// ```
-/// use tabular::{row, table};
+/// use taalika::{row, table};
 ///
 /// # fn main() {
 /// let table = table!("{:>}  {:<}  {:<}",

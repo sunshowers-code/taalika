@@ -53,13 +53,13 @@ impl Table {
     /// # Examples
     ///
     /// ```
-    /// # use tabular::*;
+    /// # use taalika::*;
     /// let table = Table::new("{{:<}} produces ‘{:<}’ and {{:>}} produces ‘{:>}’")
     ///     .with_row(Row::from_cells(["a", "bc"].iter().cloned()));
     /// ```
     pub fn new(row_spec: &str) -> Self {
         Self::new_safe(row_spec)
-            .unwrap_or_else(|e: super::error::Error| panic!("tabular::Table::new: {}", e))
+            .unwrap_or_else(|e: super::error::Error| panic!("taalika::Table::new: {}", e))
     }
 
     /// Like [`new`], but returns a [`Result`] instead of panicking if parsing `row_spec` fails.
@@ -92,7 +92,7 @@ impl Table {
     /// # Examples
     ///
     /// ```
-    /// # use tabular::*;
+    /// # use taalika::*;
     ///         let mut table = Table::new("{:<}  {:>}");
     ///         table
     ///             .add_heading("./:")
@@ -174,7 +174,7 @@ impl Table {
     /// # Examples
     ///
     /// ```
-    /// # use tabular::*;
+    /// # use taalika::*;
     /// #[cfg(windows)]
     /// const DEFAULT_LINE_END: &'static str = "\r\n";
     /// #[cfg(not(windows))]
@@ -192,7 +192,7 @@ impl Table {
     /// This works better than putting the carriage return in the format string:
     ///
     /// ```
-    /// # use tabular::*;
+    /// # use taalika::*;
     /// let table = Table::new("{:>} {:<}\r")
     ///     .with_row(Row::new().with_cell("x").with_cell("x"))
     ///     .with_row(Row::new().with_cell("yy").with_cell("yy"))
