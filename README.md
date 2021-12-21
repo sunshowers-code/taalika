@@ -47,7 +47,7 @@ produces something like
 
 ## Other features
 
-  - The `Table::with_header()` and `Table::add_header()` methods add
+  - The `Table::with_heading()` and `Table::add_heading()` methods add
     lines that span all columns.
 
   - The `row!` macro builds a row with a fixed number of columns
@@ -55,6 +55,10 @@ produces something like
 
   - The `Table::set_line_end()` method allows changing the line ending
     to include a carriage return (or whatever you want).
+
+  - The `Row::with_ansi_cell` and `Row::add_ansi_cell` methods can be
+    used to add cells with ANSI color codes, and still have their widths be
+    computed correctly.
 
 
 ## Usage

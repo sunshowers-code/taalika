@@ -42,7 +42,7 @@
 //!
 //! # Other features
 //!
-//!   - The [`Table::with_header`] and [`Table::add_header`] methods add
+//!   - The [`Table::with_heading`] and [`Table::add_heading`] methods add
 //!     lines that span all columns.
 //!
 //!   - The [`row!`] macro builds a row with a fixed number of columns
@@ -50,6 +50,10 @@
 //!
 //!   - The [`Table::set_line_end`] method allows changing the line ending
 //!     to include a carriage return (or whatever you want).
+//!
+//!   - The [`Row::with_ansi_cell`] and [`Row::add_ansi_cell`] methods can be
+//!     used to add cells with ANSI color codes, and still have their widths be
+//!     computed correctly.
 //!
 //! # Usage
 //!
@@ -82,14 +86,6 @@
 //!   including, color, borders, and CSV import.
 //!
 //! [`row!`]: macro.row.html
-//! [`Row`]: struct.Row.html
-//! [`Table`]: struct.Table.html
-//! [`Table::add_header`]: struct.Table.html#method.add_header
-//! [`Table::add_row`]: struct.Table.html#method.add_row
-//! [`Table::new`]: struct.Table.html#method.new
-//! [`Table::set_line_end`]: struct.Table.html#method.set_line_end
-//! [`Table::with_row`]: struct.Table.html#method.with_row
-//! [`Table::with_header`]: struct.Table.html#method.with_header
 
 #![warn(missing_docs)]
 
