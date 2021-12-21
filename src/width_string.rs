@@ -61,7 +61,7 @@ impl Debug for WidthString {
 #[cfg(test)]
 mod tests {
     use crate::width_string::WidthString;
-    use owo_colors::OwoColorize;
+    use colored::Colorize;
 
     #[test]
     fn ansi() {

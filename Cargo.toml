@@ -18,4 +18,4 @@ strip-ansi-escapes = "0.1.1"
 unicode-width = { version = "0.1.5", optional = true }
 
 [dev-dependencies]
-owo-colors = "3.1.1"
+colored = "2.0.0"
