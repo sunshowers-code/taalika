@@ -1,3 +1,6 @@
+// Copyright (c) taalika Contributors
+// SPDX-License-Identifier: MIT OR Apache-2.0
+
 /// Errors from parsing the table format string.
 ///
 /// Returned by [`Table::new_safe()`].
