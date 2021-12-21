@@ -1,6 +1,6 @@
 [package]
 name = "taalika"
-version = "0.1.5"
+version = "0.1.6"
 authors = ["Rain <rain@sunshowers.io>", "Jesse A. Tov <jesse.tov@gmail.com>"]
 description = "Plain text tables, aligned automatically (fork of tabular)"
 repository = "https://github.com/sunshowers-code/taalika"

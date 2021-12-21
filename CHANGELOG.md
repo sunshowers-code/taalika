@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning].
 
 [Semantic Versioning]: http://semver.org/spec/v2.0.0.html
 
+## [0.1.6] - 2021-12-21
+
+### Changed
+
+- Minor documentation updates.
+
 ## [0.1.5] - 2021-12-21
 
 ### Added
@@ -51,4 +57,5 @@ formatted tables.
 
 Initial release.
 
+[0.1.6]: https://github.com/sunshowers-code/taalika/releases/tag/0.1.6
 [0.1.5]: https://github.com/sunshowers-code/taalika/releases/tag/0.1.5
