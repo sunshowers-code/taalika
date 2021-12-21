@@ -7,7 +7,7 @@
 //! # Example
 //!
 //! ```
-//! use tabular::{Table, Row};
+//! use taalika::{Table, Row};
 //! use std::path::Path;
 //!
 //! fn ls(dir: &Path) -> ::std::io::Result<()> {
@@ -28,7 +28,7 @@
 //!     Ok(())
 //! }
 //!
-//! ls(Path::new(&"target")).unwrap();
+//! ls(Path::new("target")).unwrap();
 //! ```
 //!
 //! produces something like
@@ -53,27 +53,16 @@
 //!
 //! # Usage
 //!
-//! It's on [crates.io](https://crates.io/crates/tabular), so you can add
+//! `taalika` is on [crates.io](https://crates.io/crates/taalika).
 //!
-//! ```toml
-//! [dependencies]
-//! tabular = "0.1.4"
-//! ```
+//! # Features
 //!
-//! to your `Cargo.toml`.
+//! * Feature `unicode-width` is used to compute the width of columns in terms of
+//!   Unicode graphemes. It is enabled by default and depends on the
+//!   [unicode-width](https://crates.io/crates/unicode-width) crate.
 //!
-//!
-//! Feature `unicode-width` is enabled be default; it depends on the
-//! [unicode-width](https://crates.io/crates/unicode-width) crate. You can turn
-//! it off with:
-//!
-//! ```toml
-//! [dependencies]
-//! tabular = { version = "0.1.4", default-features = false }
-//! ```
-//!
-//! Note that without `unicode-width`, alignment will be based on the count of the
-//! `std::str::Chars` iterator.
+//!   Note that without `unicode-width`, alignment will be based on the count of the
+//!   `std::str::Chars` iterator.
 //!
 //! This crate supports Rust version 1.46.0 and later.
 //!
@@ -81,13 +70,16 @@
 //!
 //! You may also want:
 //!
+//! - [tabular](https://crates.io/crates/tabular) - `taalika` is a fork of this
+//!   crate with additional features.
+//!
 //! - [text-tables](https://crates.io/crates/text-tables) – This is more automatic
-//! than tabular. You give it an array of arrays, it renders a nice table with borders.
-//! Tabular doesn't do borders.
+//!   than tabular. You give it an array of arrays, it renders a nice table with
+//!   borders. Tabular doesn't do borders.
 //!
 //! - [prettytable](https://crates.io/crates/prettytable-rs) — This has an API more
-//! similar to tabular’s in terms of building a table, but it does a lot more, including,
-//! color, borders, and CSV import.
+//!   similar to tabular’s in terms of building a table, but it does a lot more,
+//!   including, color, borders, and CSV import.
 //!
 //! [`row!`]: macro.row.html
 //! [`Row`]: struct.Row.html
