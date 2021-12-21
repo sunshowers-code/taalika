@@ -1,7 +1,8 @@
-# tabular: plain text tables in Rust
+# taalika: plain text tables in Rust
 
-[![Build Status](https://travis-ci.org/tov/tabular-rs.svg?branch=master)](https://travis-ci.org/tov/tabular-rs)
-[![Crates.io](https://img.shields.io/crates/v/tabular.svg?maxAge=2592000)](https://crates.io/crates/tabular)
+[![Crates.io](https://img.shields.io/crates/v/taalika.svg?maxAge=2592000)](https://crates.io/crates/taalika)
+[![Documentation (latest release)](https://docs.rs/taalika/badge.svg)](https://docs.rs/taalika/)
+[![Documentation (main)](https://img.shields.io/badge/docs-main-59f)](https://sunshowers-code.github.io/taalika/rustdoc/taalika/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE-MIT)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache_2.0-blue.svg)](LICENSE-APACHE)
 
@@ -11,7 +12,7 @@ This is basically what you want if you are implementing `ls`.
 ## Example
 
 ```rust
-use tabular::{Table, Row};
+use taalika::{Table, Row};
 use std::path::Path;
 
 fn ls(dir: &Path) -> ::std::io::Result<()> {
@@ -32,7 +33,7 @@ fn ls(dir: &Path) -> ::std::io::Result<()> {
     Ok(())
 }
 
-ls(Path::new(&"target")).unwrap();
+ls(Path::new("target")).unwrap();
 ```
 
 produces something like
@@ -58,32 +59,25 @@ produces something like
 
 ## Usage
 
-It's on [crates.io](https://crates.io/crates/tabular), so you can add
+`taalika` is on [crates.io](https://crates.io/crates/taalika).
 
-```toml
-[dependencies]
-tabular = "0.1.4"
-```
+## Features
 
-to your `Cargo.toml`.
+* Feature `unicode-width` is used to compute the width of columns in terms of
+  Unicode graphemes. It is enabled by default and depends on the
+  [unicode-width](https://crates.io/crates/unicode-width) crate.
 
-Feature `unicode-width` is enabled be default; it depends on the
-[unicode-width](https://crates.io/crates/unicode-width) crate. You can turn 
-it off with:
-
-```toml
-[dependencies]
-tabular = { version = "0.1.4", default-features = false }
-```
-
-Note that without `unicode-width`, alignment will be based on the count of the
-`std::str::Chars` iterator.
+  Note that without `unicode-width`, alignment will be based on the count of the
+  `std::str::Chars` iterator.
 
 This crate supports Rust version 1.46.0 and later.
 
 ## See also
 
 You may also want:
+
+- [tabular](https://crates.io/crates/tabular) - `taalika` is a fork of this
+  crate with additional features.
 
 - [text-tables](https://crates.io/crates/text-tables) – This is more automatic
   than tabular. You give it an array of arrays, it renders a nice table with 

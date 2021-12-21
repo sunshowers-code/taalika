@@ -1,12 +1,26 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+This project adheres to [Semantic Versioning].
 
-The format is based on [Keep a Changelog] and this project adheres to
-[Semantic Versioning].
-
-[Keep a Changelog]: http://keepachangelog.com/en/1.0.0/
 [Semantic Versioning]: http://semver.org/spec/v2.0.0.html
+
+## [0.1.5] - 2021-12-21
+
+### Added
+
+- `Row::with_ansi_cell` and `add_ansi_cell` add cells that potentially have
+  ANSI color codes in them; the color codes are stripped out while computing
+  the width.
+- `Row::with_custom_width_cell` and `add_custom_width_cell` add cells with a
+  custom width.
+
+### Changed
+
+- Project forked and renamed to `taalika`.
+
+---
+
+The following releases were for the tabular crate, which this is a fork of.
 
 ## [0.1.4] - 2019-12-29
 
@@ -37,3 +51,4 @@ formatted tables.
 
 Initial release.
 
+[0.1.5]: https://github.com/sunshowers-code/taalika/releases/tag/0.1.5
